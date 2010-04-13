@@ -1,0 +1,15 @@
+<module>
+    <!-- Inherit the core Web Toolkit stuff.                  -->
+    <inherits name="com.google.gwt.user.User"/>
+	
+	<inherits name='com.google.gwt.json.JSON'/>
+	<inherits name="grails.plugins.gwt.Grails"/>
+	<inherits name="grails.plugins.DTO"/>
+	
+	<inherits name='com.google.gwt.user.theme.standard.Standard' />
+	<inherits name='com.google.gwt.inject.Inject' />
+	<inherits name='org.enunes.gwt.mvp.Mvp' />
+	
+    <!-- Specify the module entry point class.                   -->
+    <entry-point class="org.synergis.bogchi.client.Bogchi"/>
+</module>

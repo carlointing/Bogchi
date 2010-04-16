@@ -1,6 +1,8 @@
 package org.synergis.bogchi.client;
 
 import org.enunes.gwt.mvp.client.EventBus;
+import org.synergis.bogchi.client.event.GotoAdminScreenEvent;
+import org.synergis.bogchi.client.event.GotoAdminScreenHandler;
 import org.synergis.bogchi.client.gin.Injector;
 
 import com.google.gwt.core.client.EntryPoint;
@@ -23,14 +25,19 @@ public class Bogchi implements EntryPoint {
     	
     	mainPresenter.bind();
     	
-    	RootPanel.get().add(mainPresenter.getDisplay().asWidget());
+    	RootPanel.get("adminModuleContainer").add(mainPresenter.getDisplay().asWidget());
     	
     	logEvent(ginjector.getEventBus());
     
     }
     
     private void logEvent(EventBus eventBus) {
-    	
+    	eventBus.addHandler(GotoAdminScreenEvent.getType(), new GotoAdminScreenHandler() {
+			@Override
+			public void onGotoAdminScreen(GotoAdminScreenEvent event) {
+				GWT.log(event.toDebugString(), null);				
+			}
+		});
     }
     
 }

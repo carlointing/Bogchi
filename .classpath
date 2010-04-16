@@ -13,6 +13,12 @@
 	<classpathentry kind="src" path="test/unit"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="con" path="com.springsource.sts.grails.core.CLASSPATH_CONTAINER"/>
+	<classpathentry kind="lib" path="lib/gwt/aopalliance-1.0.jar"/>
+	<classpathentry kind="lib" path="lib/gwt/gin-1.0-20090611.jar"/>
+	<classpathentry kind="lib" path="lib/gwt/guice-2.0.jar"/>
+	<classpathentry kind="lib" path="lib/gwt/gwt-dev.jar"/>
+	<classpathentry kind="lib" path="lib/gwt/gwt-mvp-1.0.0.jar"/>
+	<classpathentry kind="lib" path="lib/gwt/gwt-user.jar"/>
 	<classpathentry kind="src" path="dto-0.2.3-src-java">
 		<attributes>
 			<attribute name="com.springsource.sts.grails.core.SOURCE_FOLDER" value="true"/>
@@ -73,11 +79,5 @@
 			<attribute name="com.springsource.sts.grails.core.SOURCE_FOLDER" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="lib/gwt/aopalliance-1.0.jar"/>
-	<classpathentry kind="lib" path="lib/gwt/gin-1.0-20090611.jar"/>
-	<classpathentry kind="lib" path="lib/gwt/guice-2.0.jar"/>
-	<classpathentry kind="lib" path="lib/gwt/gwt-dev.jar"/>
-	<classpathentry kind="lib" path="lib/gwt/gwt-mvp-1.0.0.jar"/>
-	<classpathentry kind="lib" path="lib/gwt/gwt-user.jar"/>
 	<classpathentry kind="output" path="web-app/WEB-INF/classes"/>
 </classpath>

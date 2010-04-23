@@ -4,7 +4,8 @@ import org.synergis.bogchi.client.MenuPresenter.Display;
 
 import com.google.gwt.event.dom.client.HasClickHandlers;
 import com.google.gwt.user.client.ui.Composite;
-import com.google.gwt.user.client.ui.FlowPanel;
+import com.google.gwt.user.client.ui.HasHorizontalAlignment;
+import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.Hyperlink;
 import com.google.gwt.user.client.ui.Widget;
 
@@ -15,8 +16,10 @@ public class MenuWidget extends Composite implements Display {
 	private final Hyperlink taxonomyMaintenanceLink;
 	
 	public MenuWidget() {
-		final FlowPanel panel = new FlowPanel();		
+		final HorizontalPanel panel = new HorizontalPanel();		
 		initWidget(panel);
+		
+		panel.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_LEFT);
 		
 		gotoAdminScreenLink = new Hyperlink("Admin", "admin");
 		taxonomyMaintenanceLink = new Hyperlink("Taxonomies", "taxonomies");

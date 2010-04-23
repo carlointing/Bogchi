@@ -79,9 +79,9 @@ public class MainPresenterImpl extends BasePresenter<Display> implements
 
 	private void doDisplayTaxonomies(List<TaxonomyDTO> taxonomies) {
 		final TaxonomyMaintenancePresenter taxonomyMaintenancePresenter = taxonomyMaintenanceProvider
-				.get();
-		taxonomyMaintenancePresenter.showTaxonomies(taxonomies);
+				.get();		
 		switchPresenter(taxonomyMaintenancePresenter);
+		taxonomyMaintenancePresenter.showTaxonomies(taxonomies);
 	}
 
 	private void switchPresenter(

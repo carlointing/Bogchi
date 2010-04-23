@@ -6,10 +6,12 @@ import org.enunes.gwt.mvp.client.EventBus;
 import org.enunes.gwt.mvp.client.presenter.BasePresenter;
 import org.synergis.bogchi.client.dto.TaxonomyDTO;
 
+import com.google.inject.Inject;
+
 public class TaxonomyMaintenancePresenterImpl extends BasePresenter<TaxonomyMaintenancePresenter.Display>
 		implements TaxonomyMaintenancePresenter {
 	
-	
+	@Inject
 	public TaxonomyMaintenancePresenterImpl(EventBus eventBus, Display display) {
 		super(eventBus, display);		
 	}

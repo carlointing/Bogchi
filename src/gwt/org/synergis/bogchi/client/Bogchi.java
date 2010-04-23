@@ -1,6 +1,8 @@
 package org.synergis.bogchi.client;
 
 import org.enunes.gwt.mvp.client.EventBus;
+import org.synergis.bogchi.client.event.DisplayTaxonomiesEvent;
+import org.synergis.bogchi.client.event.DisplayTaxonomiesHandler;
 import org.synergis.bogchi.client.event.GotoAdminScreenEvent;
 import org.synergis.bogchi.client.event.GotoAdminScreenHandler;
 import org.synergis.bogchi.client.gin.Injector;
@@ -35,6 +37,14 @@ public class Bogchi implements EntryPoint {
     	eventBus.addHandler(GotoAdminScreenEvent.getType(), new GotoAdminScreenHandler() {
 			@Override
 			public void onGotoAdminScreen(GotoAdminScreenEvent event) {
+				GWT.log(event.toDebugString(), null);				
+			}
+		});
+    	
+    	eventBus.addHandler(DisplayTaxonomiesEvent.getType(), new DisplayTaxonomiesHandler() {
+			
+			@Override
+			public void onDisplayTaxonomies(DisplayTaxonomiesEvent event) {
 				GWT.log(event.toDebugString(), null);				
 			}
 		});
